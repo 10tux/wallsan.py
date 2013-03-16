@@ -1,0 +1,50 @@
+wallsan is a python (3.x) program that changes wallpapers automatically
+every 'x' seconds from a given directory
+
+The program is written for mate-desktop but can be quickly altered to accomodate
+other desktop environments
+
+The program consists of two files
+1. wallsan.py 
+	which is supposed to be initiated at computer startup
+	and start changing the wallpapers
+
+2. commander.py - GUI
+	This is used to update the config file for wallpaper directory
+	and time interval
+	It can pause and resume wallsan.py
+	Starting commander.py automatically checks if wallsan.py is running
+	and if isn't the case, wallsan.py is started
+	
+3. wallChangerPipe - The above processes communicate through a named pipe.
+	The pipe is automatically created in the same directory as that of the
+	commander.py and wallsan.py
+
+4. config.ini - Configuration is stored in config.ini file, which also 
+	stores whether the program is paused or running.It is automatically 
+	generated once the wallsan.py is initiated
+
+All the above four files reside in the same directory
+
+
+Further Improvements:
+1. The GUI is not refined. It is upto the task but ugly. This could be improved.
+2. At present it supports only mate-desktop. This could be extended to other
+	desktop environments.
+3. The program browses only for picture files in the given directory. It could be improved to
+	recursively browse into deeper folders for picture files
+4. Program randomly chooses a wallpaper. A sequential wallpaper selection can be implemented
+5. A context menu addition can be added to change the wallpaper.
+6. Creating an installer using bash or python (2.x /3.x)
+7. Porting the program to python 2.x language.(Presently in 3.x)
+
+
+
+
+
+
+
+
+
+
+
