@@ -8,6 +8,12 @@ The program consists of two files
 1. wallsan.py 
 	which is supposed to be initiated at computer startup
 	and start changing the wallpapers
+	Note: wallsan.py should be initiated with command ./wallsan.py which
+	initiates the program with process name wallsan.py
+	Using command "python3 wallsan.py" initiates the process with python3 as
+	process name and commander.py cannot verify whether the process is running
+	causing it to intiate the program all over again resulting in two wallsan.py
+	running at the same time.
 
 2. commander.py - GUI
 	This is used to update the config file for wallpaper directory
